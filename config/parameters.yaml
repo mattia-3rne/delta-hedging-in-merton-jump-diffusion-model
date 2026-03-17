@@ -1,0 +1,15 @@
+market_params:
+  S0: 100.0
+  r: 0.05
+  sigma: 0.20
+  T: 1.0        # Time to maturity in years
+  dt: 0.003968  # 1/252 (Daily steps)
+
+merton_params:
+  lmbda: 2.0    # Expected jumps per year
+  mu_j: -0.10   # Mean jump size
+  sigma_j: 0.10 # Jump volatility
+
+simulation:
+  n_paths: 10000
+  seed: 42
