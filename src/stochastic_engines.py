@@ -10,7 +10,7 @@ class GBMModel:
         self.n_paths = config.sim.n_paths
         self.seed = config.sim.seed
         
-        # Derived parameter: number of time steps
+        # Number of time steps
         self.n_steps = int(self.T / self.dt)
 
     def generate_paths(self):
