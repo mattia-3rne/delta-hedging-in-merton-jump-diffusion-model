@@ -35,7 +35,10 @@ def bsm_delta(S, K, T, r, sigma, option_type: str = "call"):
     option_type = _validate_option_type(option_type)
 
     if T <= 0:
-        return 0.0
+        if option_type == "call":
+            return 1.0 if S > K else 0.0
+        else:
+            return -1.0 if S < K else 0.0
 
     d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
 
