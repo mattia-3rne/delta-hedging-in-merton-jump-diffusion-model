@@ -78,6 +78,9 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Local datasets / generated artifacts
+data/simulated_paths.npz
+
 # IPython
 profile_default/
 ipython_config.py

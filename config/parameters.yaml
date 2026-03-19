@@ -11,5 +11,5 @@ merton_params:
   sigma_j: 0.20 # Jump volatility
 
 simulation:
-  n_paths: 5000
+  n_paths: 10000
   seed: 42
