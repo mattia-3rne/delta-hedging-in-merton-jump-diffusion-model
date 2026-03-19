@@ -14,7 +14,7 @@ def _validate_option_type(option_type: str) -> str:
 def bsm_price(S, K, T, r, sigma, option_type: str = "call"):
     option_type = _validate_option_type(option_type)
 
-    if T <= 0:
+    if T <= 1e-10:
         if option_type == "call":
             return np.maximum(S - K, 0)
         elif option_type == "put":
@@ -34,7 +34,7 @@ def bsm_price(S, K, T, r, sigma, option_type: str = "call"):
 def bsm_delta(S, K, T, r, sigma, option_type: str = "call"):
     option_type = _validate_option_type(option_type)
 
-    if T <= 0:
+    if T <= 1e-10:
         if option_type == "call":
             return 1.0 if S > K else 0.0
         else:

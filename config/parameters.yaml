@@ -7,7 +7,7 @@ market_params:
 
 merton_params:
   lmbda: 2.0    # Expected jumps per year
-  mu_j: -0.1   # Mean jump size
+  mu_j: -0.05   # Mean jump size
   sigma_j: 0.20 # Jump volatility
 
 simulation:
