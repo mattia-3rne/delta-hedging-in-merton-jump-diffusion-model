@@ -3,11 +3,11 @@ market_params:
   r: 0.05
   sigma: 0.20
   T: 10.0       # Time horizon in years
-  dt: 0.003968  # Daily steps
+  n_steps: 2520 # Number of trading days
 
 merton_params:
   lmbda: 2.0    # Expected jumps per year
-  mu_j: -0.05   # Mean jump size
+  mu_j: 0.00   # Mean jump size
   sigma_j: 0.20 # Jump volatility
 
 simulation:

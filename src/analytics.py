@@ -36,9 +36,9 @@ def bsm_delta(S, K, T, r, sigma, option_type: str = "call"):
 
     if T <= 1e-10:
         if option_type == "call":
-            return 1.0 if S > K else 0.0
-        else:
-            return -1.0 if S < K else 0.0
+            return np.where(S > K, 1.0, 0.0)
+        elif option_type == "put":
+            return np.where(S < K, -1.0, 0.0)
 
     d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
 
