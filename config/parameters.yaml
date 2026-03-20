@@ -2,14 +2,19 @@ market_params:
   S0: 100.0
   r: 0.05
   sigma: 0.20
-  T: 10.0       # Time horizon in years
   n_steps: 2520 # Number of trading days
+
+simulation:
+  T_sim: 10.0 # Time horizon in years
+  n_paths: 10000
+  seed: 42
+
+option_params:
+  T_maturity: 2.0    # Time to maturity
+  K: 100.0           # Strike price
+  option_type: "put"
 
 merton_params:
   lmbda: 2.0    # Expected jumps per year
   mu_j: 0.00   # Mean jump size
   sigma_j: 0.20 # Jump volatility
-
-simulation:
-  n_paths: 10000
-  seed: 42

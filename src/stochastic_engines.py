@@ -5,11 +5,11 @@ class GBMModel:
         self.S0 = config.market_params.S0
         self.r = config.market_params.r
         self.sigma = config.market_params.sigma
-        self.T = config.market_params.T
+        self.T_sim = config.simulation.T_sim
         self.n_paths = config.simulation.n_paths
         self.seed = config.simulation.seed
         self.n_steps = config.market_params.n_steps
-        self.dt = self.T / self.n_steps
+        self.dt = self.T_sim / self.n_steps
         self.rng = np.random.default_rng(self.seed)
 
     def generate_paths(self):
@@ -31,7 +31,7 @@ class MertonJumpDiffusion:
         self.S0 = config.market_params.S0
         self.r = config.market_params.r
         self.sigma = config.market_params.sigma
-        self.T = config.market_params.T
+        self.T_sim = config.simulation.T_sim
         self.n_paths = config.simulation.n_paths
         self.seed = config.simulation.seed
         
@@ -39,7 +39,7 @@ class MertonJumpDiffusion:
         self.mu_j = config.merton_params.mu_j
         self.sigma_j = config.merton_params.sigma_j
         self.n_steps = config.market_params.n_steps
-        self.dt = self.T / self.n_steps
+        self.dt = self.T_sim / self.n_steps
         self.rng = np.random.default_rng(self.seed)
         
 
