@@ -173,4 +173,4 @@ The computational framework is structured as a sequential, vectorized pipeline t
 ### Configuration & Data
 * `requirements.txt`: List of the Python dependecies.
 * `config/`: Central parameter configuration.
-* `data/`: Directory structure for storing data.
+* `data/`: Directory for storing data.
